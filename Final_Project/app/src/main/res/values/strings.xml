@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Final_Project</string>
+    <string name="error_message">There is a problem with your information!</string>
+    <string name="success_message">Course Saved</string>
+</resources>

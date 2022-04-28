@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <TextView
+        android:id="@+id/courseInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Course Information"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkMonday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Mon"
+        app:layout_constraintEnd_toStartOf="@+id/checkTues"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfo" />
+
+    <CheckBox
+        android:id="@+id/checkWed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:text="Wed"
+        app:layout_constraintEnd_toStartOf="@+id/checkThurs"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfo" />
+
+    <CheckBox
+        android:id="@+id/checkTues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="24dp"
+        android:text="Tues"
+        app:layout_constraintEnd_toStartOf="@+id/checkWed"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfo" />
+
+    <CheckBox
+        android:id="@+id/checkFri"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:text="Fri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfo" />
+
+    <CheckBox
+        android:id="@+id/checkThurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="20dp"
+        android:text="Thurs"
+        app:layout_constraintEnd_toStartOf="@+id/checkFri"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="332dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:text="Days of Week Course Occurs"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkWed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/timeConstraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:text="Start Time must be after 6:00 and End Time must be before 22:00"
+        android:textAlignment="center"
+        android:textColor="#FB0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameAndNumber"
+        tools:textStyle="bold" />
+
+    <Button
+        android:id="@+id/startTime"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:layout_weight="1"
+        android:onClick="onTimeStart"
+        android:text="Start Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditHour" />
+
+    <Button
+        android:id="@+id/endTime"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="76dp"
+        android:text="Select End Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/startTime"
+        app:layout_constraintTop_toBottomOf="@+id/roomBuilding" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/nameAndNumber"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Course Name and Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWed" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/creditHour"
+        android:layout_width="174dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Credit Hours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameAndNumber" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/roomBuilding"
+        android:layout_width="186dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Building and Room #"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/creditHour"
+        app:layout_constraintTop_toBottomOf="@+id/nameAndNumber" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="144dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="216dp"
+        android:text="save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameAndNumber" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="52dp"
+        android:clickable="true"
+        android:onClick="removeCurrent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
